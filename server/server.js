@@ -8,7 +8,8 @@ require('dotenv').config({ path: '../.env' });
 app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`);
 });
-app.use(express.json());
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
 
 mongoose
   .connect(process.env.MONGO_KEY, {
