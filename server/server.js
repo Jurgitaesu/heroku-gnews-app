@@ -10,6 +10,7 @@ app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`);
 });
 const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.json());
 app.use(express.static(buildPath));
 
 mongoose
