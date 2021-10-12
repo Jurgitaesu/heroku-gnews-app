@@ -78,7 +78,7 @@ function App() {
     <Router>
       <div className="container">
         <div className="row mt-5">
-          <h3 className="text-center">Search for articles on GNews</h3>
+          <h3 className="text-center">Search for articles on Google News</h3>
           <SearchInput validateInput={(keyword) => validateInput(keyword)} error={error} />
         </div>
         {isLoadingEnabled && <Loader />}
